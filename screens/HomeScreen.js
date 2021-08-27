@@ -7,7 +7,7 @@ export default function HomeScreen({navigation}) {
 
   const getMovies = async () => {
     try {
-      const response = await fetch('https://reactnative.dev/movies.json');
+      const response = await fetch('http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json');
       const json = await response.json();
       setData(json.movies);
     } catch (error) {
